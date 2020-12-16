@@ -1,0 +1,6 @@
+export FROM_EMAIL="from@example.com"
+export TO_EMAIL="to@example.com"
+export SUBJECT="Parking Results"
+export DATES="1/21/2020,1/23/2020,1/27/2020"
+export POSTMARK_API="api-key"
+export SKIP_PAID=false # Set to true if you only want results on free events

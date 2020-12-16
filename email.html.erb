@@ -1,0 +1,32 @@
+<html>
+<body>
+<% @results.each do |result| %>
+<div>
+  <h4><%= result[:date] %><br><small>Listed Availability: <%= result[:total_available] %></small></h4>  
+  <% unless result[:locations].empty? %>
+  <table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Status</th>
+      <th>Qty</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% result[:locations].each do |loc| %>
+    <tr>
+      <td><%= loc[:name] %></td>
+      <td><%= loc[:status] %></td>
+      <td><%= loc[:limited_qty] %></td>
+      <td>$<%= loc[:price] %></td>
+    </tr>
+    <% end %>
+  </tbody>
+  </table>
+  <% end %>
+</div>
+<hr>
+<% end %>
+</body>
+</html>
