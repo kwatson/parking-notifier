@@ -1,5 +1,7 @@
 FROM ruby:2.7-alpine
 
+LABEL org.opencontainers.image.source https://github.com/kwatson/parking-notifier
+
 RUN set -eux; \
         \
         apk add --no-cache \

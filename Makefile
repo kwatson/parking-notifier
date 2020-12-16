@@ -6,7 +6,7 @@ help: ## Help
 .DEFAULT_GOAL := help
 
 build: ## Build Image
-	@docker build -t ghcr.io/kwatson/parking:latest .
+	@docker build -t ghcr.io/kwatson/parking-notifier:latest .
 
 push: ## Deploy newly crated image
-	@docker push ghcr.io/kwatson/parking:latest
+	@docker push ghcr.io/kwatson/parking-notifier:latest
