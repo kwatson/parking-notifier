@@ -14,5 +14,5 @@ docker run -d \
        -e DATES="1/11/2020,1/3/2020,5/17/2020" \
        -e POSTMARK_API="api-key" \
        -e SKIP_PAID=false \
-       ghcr.io/kwatson/parking:latest
+       ghcr.io/kwatson/parking-notifier:latest
 ```
