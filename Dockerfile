@@ -12,14 +12,17 @@ RUN set -eux; \
                 openssh \
                 pcre \
                 pcre-dev \
-                tini
+                tini \
+        ; \
+        mkdir -p /etc/periodic/2min/
 
 WORKDIR /mnt
 COPY Gemfile /mnt
 COPY Gemfile.lock /mnt
-COPY ruby_job.sh /etc/periodic/15min/ruby_job
+COPY crontab /etc/crontabs/root
+COPY ruby_job.sh /etc/periodic/2min/ruby_job
 
-RUN chmod +x /etc/periodic/15min/ruby_job \
+RUN chmod +x /etc/periodic/2min/ruby_job \
     && cd /mnt \
     && echo "[]" > /mnt/db.json \
     && bundle install
